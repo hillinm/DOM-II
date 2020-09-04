@@ -104,3 +104,20 @@ footerEvent.addEventListener("mouseover", () => {
     footerEvent.style.backgroundColor = "hotpink"
 })
 
+
+const body = document.querySelector("body")
+body.addEventListener("click", () => {
+  body.style.backgroundColor = "papayawhip"
+  console.log("end")
+})
+
+const containerHome = document.querySelector('.intro')
+containerHome.addEventListener("click", (event) => {
+  event.stopPropagation();  
+  containerHome.style.backgroundColor = "purple"
+})
+
+const stopLink = document.querySelector('.nav-link')
+stopLink.addEventListener('click', (event) => {
+  event.preventDefault();
+})
