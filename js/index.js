@@ -42,9 +42,12 @@ wheelEvent.forEach(element => {
 
 // #5 Event Listener
 
-window.onload = () => {
-    alert('Welcome to my house!')
-}
+const loadEvent = document.querySelectorAll('img')
+loadEvent.forEach(element => {
+    element.addEventListener('load', () => {
+        element.style.animation = "rotation 2s linear"
+    })
+})
 
 // #6 Event Listener
 
@@ -68,4 +71,13 @@ focusEvent.forEach(element => {
 const selectText = document.querySelector("footer")
 selectText.addEventListener('select', () => {
     selectText.style.boxShadow = "10px"
+})
+
+// #8 Event Listener
+
+const leftPar = document.querySelectorAll('.destination h4')
+leftPar.forEach(element => {
+    element.addEventListener("mouseover", () => {
+        element.style.color = "purple"
+    })
 })
