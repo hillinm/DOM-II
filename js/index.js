@@ -42,4 +42,30 @@ wheelEvent.forEach(element => {
 
 // #5 Event Listener
 
+window.onload = () => {
+    alert('Welcome to my house!')
+}
 
+// #6 Event Listener
+
+const focusEvent = document.querySelectorAll("h2")
+focusEvent.forEach(element => {
+    element.addEventListener('wheel', () => {
+        element.style.color = "red"
+        element.style.animation = "rotation 2s infinite linear"
+    }, true)
+})
+
+focusEvent.forEach(element => {
+    element.addEventListener('click', () => {
+        element.style.color = "red"
+        element.style.animation = "none"
+    }, true)
+})
+
+// #7 Event Listener
+
+const selectText = document.querySelector("footer")
+selectText.addEventListener('select', () => {
+    selectText.style.boxShadow = "10px"
+})
