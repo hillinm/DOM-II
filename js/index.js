@@ -81,3 +81,26 @@ leftPar.forEach(element => {
         element.style.color = "purple"
     })
 })
+
+// #9 Event Listener
+
+const buttonEvent = document.querySelectorAll('.btn')
+buttonEvent.forEach(element => {
+    element.addEventListener("mousemove", () => {
+        element.style.backgroundColor = "blue"
+    })
+})
+
+buttonEvent.forEach(element => {
+    element.addEventListener("mouseleave", () => {
+        element.style.backgroundColor = "#00879F"
+    })
+})
+
+// #10 Event Listener
+
+const footerEvent = document.querySelector("footer")
+footerEvent.addEventListener("mouseover", () => {
+    footerEvent.style.backgroundColor = "hotpink"
+})
+
