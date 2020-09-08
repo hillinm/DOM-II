@@ -121,3 +121,5 @@ const stopLink = document.querySelector('.nav-link')
 stopLink.addEventListener('click', (event) => {
   event.preventDefault();
 })
+
+gsap.to(".logo-heading", {duration: 2, x: 300, color: "blue"});
