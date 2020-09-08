@@ -1,8 +1,4 @@
-const red = "block block--red"
-const blue = "block block--blue"
-const green = "block block--green"
-const pink = "block block--pink"
-const gray = "block block--gray"
+import { gsap } from 'gsap';
 
 const redRocket = document.querySelector('.blocks .block--red')
 const blueRocket = document.querySelector('.blocks .block--blue')
@@ -12,27 +8,27 @@ const grayRocket = document.querySelector('.blocks .block--gray')
 
 
 blueRocket.addEventListener('click', () => {
-    blueRocket.className = red
-    redRocket.className = blue
+    gsap.to(blueRocket, {duration: 2, y: -120})
+    gsap.to(redRocket, {duration: 2, y: 120})
 });
 
 greenRocket.addEventListener('click', () => {
-    redRocket.className = green
-    blueRocket.className = red
-    greenRocket.className = blue
+    gsap.to(greenRocket, {duration: 2, y: -240})
+    gsap.to(blueRocket, {duration: 2, y: 120})
+    gsap.to(redRocket, {duration: 2, y: 120})
 })
 
 pinkRocket.addEventListener('click', () => {
-    redRocket.className = pink
-    blueRocket.className = red
-    greenRocket.className = blue
-    pinkRocket.className = green
+    gsap.to(pinkRocket, {duration: 2, y: -360})
+    gsap.to(greenRocket, {duration: 2, y: 120})
+    gsap.to(blueRocket, {duration: 2, y: 120})
+    gsap.to(redRocket, {duration: 2, y: 120})
 })
 
 grayRocket.addEventListener('click', () => {
-    redRocket.className = gray
-    blueRocket.className = red
-    greenRocket.className = blue
-    pinkRocket.className = green
-    grayRocket.className = pink
+    gsap.to(grayRocket, {duration: 2, y: -480})
+    gsap.to(pinkRocket, {duration: 2, y: 120})
+    gsap.to(greenRocket, {duration: 2, y: 120})
+    gsap.to(blueRocket, {duration: 2, y: 120})
+    gsap.to(redRocket, {duration: 2, y: 120})
 })
