@@ -12,7 +12,7 @@ redRocket.addEventListener('click', () => {
     gsap.to(greenRocket, {duration: 2, y: 0})
     gsap.to(pinkRocket, {duration: 2, y: 0})
     gsap.to(grayRocket, {duration: 2, y: 0})
-});
+})
 
 blueRocket.addEventListener('click', () => {
     gsap.to(blueRocket, {duration: 2, y: -120})
@@ -45,3 +45,4 @@ grayRocket.addEventListener('click', () => {
     gsap.to(blueRocket, {duration: 2, y: 120})
     gsap.to(redRocket, {duration: 2, y: 120})
 })
+
